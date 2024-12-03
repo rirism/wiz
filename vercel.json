@@ -1,13 +1,7 @@
 {
-    "version": 2,
-    "builds": [
-      {
-        "src": "wiz/wsgi.py",
-        "use": "@vercel/python",
-        "config": { "runtime": "python3.9" }
-      }
-    ],
-    "routes": [
-      { "src": "/(.*)", "dest": "wiz/wsgi.py" }
-    ]
+  "version": 2,
+  "routes": [
+    { "src": "/static/(.*)", "dest": "/static/$1" },
+    { "src": "/(.*)", "dest": "wiz/wsgi.py" }
+  ]
 }
