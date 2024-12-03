@@ -1,17 +1,20 @@
 {
-    "version": 2,
-    "builds": [
-      {
-        "src": "wiz/wsgi.py",
-        "use": "@vercel/python",
-        "config": { "runtime": "python3.9" }
-      }
-    ],
-    "routes": [
-      { "src": "/static/(.*)", "dest": "/static/$1" },
-      { "src": "/(.*)", "dest": "wiz/wsgi.py" }
-    ],
-    "env": {
-      "DJANGO_SETTINGS_MODULE": "wiz.settings"
+  "version": 2,
+  "builds": [
+    {
+      "src": "wiz/wsgi.py",
+      "use": "@vercel/python",
+      "config": { "runtime": "python3.9" }
     }
-  }  
+  ],
+  "routes": [
+    { "src": "/static/(.*)", "dest": "/static/$1" },
+    { "src": "/(.*)", "dest": "wiz/wsgi.py" }
+  ],
+  "build": {
+    "env": {
+      "PYTHONUNBUFFERED": "1",
+      "PIP_NO_CACHE_DIR": "false"
+    }
+  }
+}
