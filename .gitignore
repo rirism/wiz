@@ -1,0 +1,47 @@
+# Python bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+env/
+
+# Django static and media files
+staticfiles/
+media/
+
+# Local development database
+*.sqlite3
+
+# Secrets
+.env
+
+# IDEs and editors
+.vscode/
+.idea/
+*.swp
+*~
+*.sublime-workspace
+*.sublime-project
+
+# Logs and debugging
+*.log
+debug.log
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Build artifacts
+build/
+dist/
+*.egg-info/
+
+# Node.js dependencies (if used for frontend assets)
+node_modules/
+
+# Coverage reports
+coverage/
+*.cover
+*.coverage
